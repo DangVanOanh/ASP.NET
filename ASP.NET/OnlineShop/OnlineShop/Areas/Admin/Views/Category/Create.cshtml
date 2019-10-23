@@ -1,0 +1,132 @@
+﻿@model Models.EF.Category
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Category</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MetaTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MetaTitle)
+            @Html.ValidationMessageFor(model => model.MetaTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ParrentID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ParrentID)
+            @Html.ValidationMessageFor(model => model.ParrentID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DisplayOrder)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DisplayOrder)
+            @Html.ValidationMessageFor(model => model.DisplayOrder)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SeoTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SeoTitle)
+            @Html.ValidationMessageFor(model => model.SeoTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreateDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreateDate)
+            @Html.ValidationMessageFor(model => model.CreateDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreateBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreateBy)
+            @Html.ValidationMessageFor(model => model.CreateBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModifiedDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModifiedDate)
+            @Html.ValidationMessageFor(model => model.ModifiedDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModifiedBy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModifiedBy)
+            @Html.ValidationMessageFor(model => model.ModifiedBy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MetaKeywords)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MetaKeywords)
+            @Html.ValidationMessageFor(model => model.MetaKeywords)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MetaDescriptions)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MetaDescriptions)
+            @Html.ValidationMessageFor(model => model.MetaDescriptions)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Status)
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ShowOnHome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ShowOnHome)
+            @Html.ValidationMessageFor(model => model.ShowOnHome)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
